@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="de" class="bg-gray-100">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recherche: Mein Weg nach dem Praktikum</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Die Textareas sollen aussehen wie normales Papier/Formular */
+        textarea {
+            resize: none;
+            overflow: hidden;
+            min-height: 80px;
+        }
+    </style>
+</head>
+<body class="text-gray-800 font-sans antialiased p-4 md:p-8">
+
+    <!-- Container der Web-Ansicht -->
+    <div id="dokumentation" class="max-w-6xl mx-auto bg-white shadow-xl rounded-2xl overflow-hidden pb-12">
+        
+        <!-- Header Section -->
+        <div class="bg-indigo-600 text-white p-8 md:p-12">
+            <h1 class="text-3xl md:text-4xl font-bold mb-4">Recherche: Mein Weg nach dem Praktikum</h1>
+            <p class="text-indigo-100 mb-2 text-lg">Hier findest du eine umfassende Linksammlung für deine berufliche Orientierung nach dem Praktikum.</p>
+            <p class="text-indigo-100 text-lg">Nutze die aufgelisteten Portale und Tools zur Information und <strong>dokumentiere deine Erkenntnisse direkt hier auf der Seite</strong>. Am Ende kannst du deine Antworten kompakt exportieren.</p>
+            
+            <div class="mt-8 bg-white/20 p-6 rounded-xl backdrop-blur-sm border border-white/30">
+                
+                <div class="mb-5">
+                    <label class="block text-sm font-semibold text-white mb-2">Mein Name (für das Export-Dokument):</label>
+                    <input type="text" id="studentName" class="w-full p-3 bg-white text-gray-800 border-none rounded-lg focus:ring-2 focus:ring-indigo-300 outline-none" placeholder="Vor- und Nachname eintragen...">
+                </div>
+
+                <label class="block text-sm font-semibold text-white mb-2">Mein Fokus: Welche zwei Themen/Bereiche interessieren mich nach dem Praktikum am meisten?</label>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <input type="text" id="thema1" class="w-full p-3 bg-white text-gray-800 border-none rounded-lg focus:ring-2 focus:ring-indigo-300 outline-none" placeholder="Thema 1...">
+                    <input type="text" id="thema2" class="w-full p-3 bg-white text-gray-800 border-none rounded-lg focus:ring-2 focus:ring-indigo-300 outline-none" placeholder="Thema 2...">
+                </div>
+            </div>
+        </div>
+
+        <!-- Infografik -->
+        <div class="p-8 border-b border-gray-200 bg-white flex justify-center">
+            <img src="infografik.png" alt="" class="max-w-full h-auto rounded-xl shadow-md border border-gray-100">
+        </div>
+
+        <!-- Informations-Ressourcen & Interaktive Dokumentation -->
+        <div class="p-8 md:p-12 space-y-16">
+            
+            <!-- Sektion 1 -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <section>
+                    <h2 class="text-2xl font-bold text-indigo-700 mb-2 border-b-2 border-indigo-100 pb-2">1. Selbsterkundung & Kompetenzcheck</h2>
+                    <p class="text-gray-600 mb-4">Bevor man sucht, muss man wissen, wer man ist. Diese Tools helfen dabei, Interessen und Stärken mit Anforderungen abzugleichen.</p>
+                    <ul class="space-y-3">
+                        <li class="bg-gray-50 p-4 rounded-lg border-l-4 border-indigo-400">
+                            <strong><a href="https://www.arbeitsagentur.de/bildung/welche-ausbildung-welches-studium-passt" target="_blank" class="text-indigo-600 hover:text-indigo-800 underline">Check-U (Arbeitsagentur)</a>:</strong> Das Standard-Tool der Bundesagentur für Arbeit. Es bietet vier Testbausteine (Fähigkeiten, soziale Kompetenzen, Interessen, berufliche Vorlieben).
+                        </li>
+                        <li class="bg-gray-50 p-4 rounded-lg border-l-4 border-indigo-400">
+                            <strong><a href="https://studiengaenge.zeit.de/sit" target="_blank" class="text-indigo-600 hover:text-indigo-800 underline">Studienwahl-Test (ZEIT Campus)</a>:</strong> Sehr fundiert, um Interessenbereiche einzugrenzen.
+                        </li>
+                        <li class="bg-gray-50 p-4 rounded-lg border-l-4 border-indigo-400">
+                            <strong><a href="https://www.schulewirtschaft.de/" target="_blank" class="text-indigo-600 hover:text-indigo-800 underline">WAS-HAB-ICH-DRAUF? (Schule-Wirtschaft)</a>:</strong> Ein interessanter Ansatz, der eher über die Tätigkeiten anstatt über starre Berufsbezeichnungen geht.
+                        </li>
+                    </ul>
+                </section>
+                <div class="bg-indigo-50/50 border border-indigo-100 p-6 rounded-2xl flex flex-col shadow-sm">
+                    <h3 class="text-lg font-bold text-indigo-800 mb-4 flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                        Meine Notizen
+                    </h3>
+                    <label class="text-sm font-semibold text-gray-700 mb-2">Welche Stärken, Interessen und passenden Berufsfelder wurden mir in den Tests vorgeschlagen?</label>
+                    <textarea id="notes1_1" class="w-full p-3 border border-indigo-200 rounded-xl focus:ring-2 focus:ring-indigo-500 outline-none mb-4 auto-expand" placeholder="Meine Testergebnisse..."></textarea>
+                    
+                    <label class="text-sm font-semibold text-gray-700 mb-2">Was hat mich überrascht? Was wusste ich schon?</label>
+                    <textarea id="notes1_2" class="w-full p-3 border border-indigo-200 rounded-xl focus:ring-2 focus:ring-indigo-500 outline-none auto-expand" placeholder="Meine Gedanken dazu..."></textarea>
+                </div>
+            </div>
+
+            <!-- Sektion 2 -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <section>
+                    <h2 class="text-2xl font-bold text-indigo-700 mb-2 border-b-2 border-indigo-100 pb-2">2. Recherche-Tools: Studium & Ausbildung</h2>
+                    <p class="text-gray-600 mb-4">Diese Portale sind essenziell, um die gesamte Bandbreite an Möglichkeiten zu sehen.</p>
+                    <ul class="space-y-3">
+                        <li class="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-400">
+                            <strong><a href="https://web.arbeitsagentur.de/berufenet/" target="_blank" class="text-blue-600 hover:text-blue-800 underline">BERUFENET (Arbeitsagentur)</a>:</strong> Das umfassendste Lexikon für Ausbildungsberufe und schulische Ausbildungen in Deutschland.
+                        </li>
+                        <li class="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-400">
+                            <strong><a href="https://studienwahl.de/" target="_blank" class="text-blue-600 hover:text-blue-800 underline">Studienwahl.de</a>:</strong> Das offizielle Studienwahlportal der Länder. Sehr verlässlich und übersichtlich.
+                        </li>
+                        <li class="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-400">
+                            <strong><a href="https://www.hochschulkompass.de/" target="_blank" class="text-blue-600 hover:text-blue-800 underline">Hochschulkompass.de</a>:</strong> Die Datenbank für alle Studiengänge in Deutschland. Ideal, um nach bestimmten Standorten oder Schwerpunkten zu filtern.
+                        </li>
+                        <li class="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-400">
+                            <strong><a href="https://www.azubiyo.de/" target="_blank" class="text-blue-600 hover:text-blue-800 underline">Azubiyo</a>:</strong> Sehr benutzerfreundlich, bietet neben der Suche auch Tipps zu Bewerbungen und Einstellungstests.
+                        </li>
+                    </ul>
+                </section>
+                <div class="bg-blue-50/50 border border-blue-100 p-6 rounded-2xl flex flex-col shadow-sm">
+                    <h3 class="text-lg font-bold text-blue-800 mb-4 flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                        Meine Notizen
+                    </h3>
+                    <label class="text-sm font-semibold text-gray-700 mb-2">Welche 2-3 konkreten Studiengänge oder Ausbildungen habe ich mir genauer angesehen?</label>
+                    <textarea id="notes2_1" class="w-full p-3 border border-blue-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none mb-4 auto-expand" placeholder="Z.B. Industriekaufmann/-frau, B.A. BWL..."></textarea>
+                    
+                    <label class="text-sm font-semibold text-gray-700 mb-2">Was sind die wichtigsten Voraussetzungen (Noten, Fähigkeiten) für diese Wege?</label>
+                    <textarea id="notes2_2" class="w-full p-3 border border-blue-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none auto-expand" placeholder="Z.B. Mathe Note mind. Befriedigend, Kommunikationsstärke..."></textarea>
+                </div>
+            </div>
+
+            <!-- Sektion 3 -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <section>
+                    <h2 class="text-2xl font-bold text-indigo-700 mb-2 border-b-2 border-indigo-100 pb-2">3. Weitere Möglichkeiten (FSJ, BFD, Ausland)</h2>
+                    <p class="text-gray-600 mb-4">Für diejenigen, die noch nicht sofort ein Studium oder eine Ausbildung beginnen möchten.</p>
+                    <ul class="space-y-3">
+                        <li class="bg-gray-50 p-4 rounded-lg border-l-4 border-green-400">
+                            <strong><a href="https://www.bundesfreiwilligendienst.de/" target="_blank" class="text-green-600 hover:text-green-800 underline">Ein Jahr Freiwilligendienst (BMFSFJ)</a>:</strong> Das offizielle Portal für den Bundesfreiwilligendienst.
+                        </li>
+                        <li class="bg-gray-50 p-4 rounded-lg border-l-4 border-green-400">
+                            <strong><a href="https://ein-jahr-freiwillig.de/" target="_blank" class="text-green-600 hover:text-green-800 underline">FSJ-Stellenbörse</a>:</strong> Eine gute Seite, um freie Plätze für das Freiwillige Soziale Jahr zu finden.
+                        </li>
+                        <li class="bg-gray-50 p-4 rounded-lg border-l-4 border-green-400">
+                            <strong><a href="https://www.rausvonzuhaus.de/" target="_blank" class="text-green-600 hover:text-green-800 underline">Raus von zuhause (Eurodesk)</a>:</strong> Die erste Adresse für Freiwilligendienste im Ausland, Work & Travel oder Au-pair.
+                        </li>
+                    </ul>
+                </section>
+                <div class="bg-green-50/50 border border-green-100 p-6 rounded-2xl flex flex-col shadow-sm">
+                    <h3 class="text-lg font-bold text-green-800 mb-4 flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                        Meine Notizen
+                    </h3>
+                    <label class="text-sm font-semibold text-gray-700 mb-2">Ist ein "Plan B" (Überbrückung) für mich interessant? Wenn ja, in welchem Bereich (sozial, ökologisch, Ausland)?</label>
+                    <textarea id="notes3" class="w-full p-3 border border-green-200 rounded-xl focus:ring-2 focus:ring-green-500 outline-none mb-4 auto-expand" placeholder="Meine Gedanken zu Überbrückungsmöglichkeiten..."></textarea>
+                </div>
+            </div>
+
+            <!-- Sektion 4 -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <section>
+                    <h2 class="text-2xl font-bold text-indigo-700 mb-2 border-b-2 border-indigo-100 pb-2">4. Regionaler Schwerpunkt: Köln/Bonn</h2>
+                    <p class="text-gray-600 mb-4">Hier findest du Angebote in der Umgebung.</p>
+                    <ul class="space-y-3">
+                        <li class="bg-gray-50 p-4 rounded-lg border-l-4 border-red-400">
+                            <strong><a href="https://www.bildung.koeln.de/studium/studienwahl/" target="_blank" class="text-red-600 hover:text-red-800 underline">Studieren in Köln/Bonn</a>:</strong> Infos von der Bildungsregion Köln.
+                        </li>
+                        <li class="bg-gray-50 p-4 rounded-lg border-l-4 border-red-400">
+                            <strong><a href="https://www.ihk-lehrstellenboerse.de/" target="_blank" class="text-red-600 hover:text-red-800 underline">IHK Köln - Lehrstellenbörse</a>:</strong> Perfekt für duale Ausbildungsplätze in der Region Köln.
+                        </li>
+                        <li class="bg-gray-50 p-4 rounded-lg border-l-4 border-red-400">
+                            <strong><a href="https://www.hwk-koeln.de/artikel/lehrstellenboerse-32,0,1093.html" target="_blank" class="text-red-600 hover:text-red-800 underline">HWK Köln - Lehrstellenbörse</a>:</strong> Handwerkliche Berufe im Raum Köln/Bonn/Leverkusen.
+                        </li>
+                        <li class="bg-gray-50 p-4 rounded-lg border-l-4 border-red-400">
+                            <strong><a href="https://www.bildung.koeln.de/kaoa/" target="_blank" class="text-red-600 hover:text-red-800 underline">Ausbildungsregion Köln (KAoA)</a>:</strong> Lokale Projekte (Kein Abschluss ohne Anschluss).
+                        </li>
+                    </ul>
+                </section>
+                <div class="bg-red-50/50 border border-red-100 p-6 rounded-2xl flex flex-col shadow-sm">
+                    <h3 class="text-lg font-bold text-red-800 mb-4 flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                        Meine Notizen
+                    </h3>
+                    <label class="text-sm font-semibold text-gray-700 mb-2">Welche Unternehmen, Hochschulen oder Einrichtungen aus der Region Köln/Bonn sind für mich spannend?</label>
+                    <textarea id="notes4" class="w-full p-3 border border-red-200 rounded-xl focus:ring-2 focus:ring-red-500 outline-none mb-4 auto-expand" placeholder="Z.B. Uni Bonn, ein bestimmtes Unternehmen in Köln..."></textarea>
+                </div>
+            </div>
+
+            <!-- Sektion 5 & 6 -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <section>
+                    <h2 class="text-2xl font-bold text-indigo-700 mb-4 border-b-2 border-indigo-100 pb-2">5. & 6. Finanzierung & Stipendien</h2>
+                    
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">BAföG & BAB</h3>
+                    <ul class="list-disc list-inside text-gray-700 mb-4 ml-2 space-y-1">
+                        <li><a href="https://www.bafög.de/" target="_blank" class="text-indigo-600 hover:text-indigo-800 underline">BAföG – Informationsseite des Bundes</a></li>
+                        <li><a href="https://www.arbeitsagentur.de/bildung/ausbildung/berufsausbildungsbeihilfe-bab" target="_blank" class="text-indigo-600 hover:text-indigo-800 underline">Berufsausbildungsbeihilfe (BAB)</a></li>
+                    </ul>
+
+                    <h3 class="text-lg font-bold text-gray-800 mt-4 mb-2">Stipendien (Auch für Engagement!)</h3>
+                    <ul class="space-y-3 mb-6">
+                        <li class="bg-gray-50 p-4 rounded-lg border-l-4 border-yellow-400">
+                            <strong><a href="https://www.deutschlandstipendium.de/" target="_blank" class="text-yellow-700 hover:text-yellow-900 underline">Deutschlandstipendium</a>:</strong> Fördert Studierende; neben Leistungen zählen auch Engagement und besondere Bildungsbiografien.
+                        </li>
+                        <li class="bg-gray-50 p-4 rounded-lg border-l-4 border-yellow-400">
+                            <strong><a href="https://www.mystipendium.de/" target="_blank" class="text-yellow-700 hover:text-yellow-900 underline">myStipendium</a>:</strong> Umfangreiche Suchplattform.
+                        </li>
+                    </ul>
+                </section>
+                <div class="bg-yellow-50/50 border border-yellow-100 p-6 rounded-2xl flex flex-col shadow-sm">
+                    <h3 class="text-lg font-bold text-yellow-800 mb-4 flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                        Meine Notizen
+                    </h3>
+                    <label class="text-sm font-semibold text-gray-700 mb-2">Wie plane ich, meine Ausbildung oder mein Studium zu finanzieren?</label>
+                    <textarea id="notes5_1" class="w-full p-3 border border-yellow-200 rounded-xl focus:ring-2 focus:ring-yellow-500 outline-none mb-4 auto-expand" placeholder="Z.B. Elternunterstützung, BAföG, Nebenjob..."></textarea>
+                    
+                    <label class="text-sm font-semibold text-gray-700 mb-2">Bringe ich Voraussetzungen für ein Stipendium mit (z.B. Ehrenamt im Verein)?</label>
+                    <textarea id="notes5_2" class="w-full p-3 border border-yellow-200 rounded-xl focus:ring-2 focus:ring-yellow-500 outline-none auto-expand" placeholder="Z.B. Ich trainiere die D-Jugend im Fußball..."></textarea>
+                </div>
+            </div>
+
+            <!-- Sektion 7 -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <section>
+                    <h2 class="text-2xl font-bold text-indigo-700 mb-4 border-b-2 border-indigo-100 pb-2">7. Wohnen und Wohnungssuche</h2>
+                    
+                    <h3 class="text-lg font-bold text-gray-800 mt-4 mb-2">Studierendenwerk Köln</h3>
+                    <ul class="space-y-3 mb-6">
+                        <li class="bg-gray-50 p-4 rounded-lg border-l-4 border-teal-400">
+                            <strong><a href="https://www.kstw.de/wohnen" target="_blank" class="text-teal-700 hover:text-teal-900 underline">Kölner Studierendenwerk – Wohnen</a>:</strong> Bietet oft die günstigsten Wohnmöglichkeiten für Studierende an.
+                        </li>
+                    </ul>
+
+                    <h3 class="text-lg font-bold text-gray-800 mt-4 mb-2">WG-Suche & Wohnungen</h3>
+                    <ul class="list-disc list-inside text-gray-700 ml-2 space-y-1">
+                        <li><a href="https://www.wg-gesucht.de/" target="_blank" class="text-teal-700 hover:text-teal-900 underline">WG-Gesucht</a>: Wichtigste Plattform für Wohngemeinschaften.</li>
+                        <li><a href="https://www.immobilienscout24.de/" target="_blank" class="text-teal-700 hover:text-teal-900 underline">ImmoScout24</a> / <a href="https://www.immowelt.de/" target="_blank" class="text-teal-700 hover:text-teal-900 underline">Immowelt</a></li>
+                    </ul>
+                </section>
+                <div class="bg-teal-50/50 border border-teal-100 p-6 rounded-2xl flex flex-col shadow-sm">
+                    <h3 class="text-lg font-bold text-teal-800 mb-4 flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                        Meine Notizen
+                    </h3>
+                    <label class="text-sm font-semibold text-gray-700 mb-2">Welche Wohnsituation wünsche ich mir für die erste Zeit nach der Schule?</label>
+                    <textarea id="notes7" class="w-full p-3 border border-teal-200 rounded-xl focus:ring-2 focus:ring-teal-500 outline-none auto-expand" placeholder="Z.B. Weiter zu Hause wohnen oder in eine WG in Köln ziehen..."></textarea>
+                </div>
+            </div>
+
+            <!-- Fazit & Nächste Schritte -->
+            <div class="bg-gray-800 text-white p-8 rounded-2xl shadow-lg mt-12">
+                <h2 class="text-2xl font-bold mb-6 border-b border-gray-600 pb-2">Fazit & Meine nächsten Schritte</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-300 mb-2">Welche Fragen sind nach meiner Recherche noch offen?</label>
+                        <textarea id="offeneFragen" class="w-full p-3 bg-gray-700 text-white border-none rounded-xl focus:ring-2 focus:ring-indigo-400 outline-none auto-expand" placeholder="Noch ungeklärte Punkte..."></textarea>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-300 mb-4">Checkliste: Was mache ich als Nächstes?</label>
+                        <div class="space-y-3">
+                            <label class="flex items-center space-x-3 cursor-pointer">
+                                <input type="checkbox" id="step1" class="form-checkbox h-5 w-5 text-indigo-500 rounded bg-gray-700 border-gray-500 focus:ring-indigo-500">
+                                <span>Eltern/Verwandte im Berufsfeld befragen</span>
+                            </label>
+                            <label class="flex items-center space-x-3 cursor-pointer">
+                                <input type="checkbox" id="step2" class="form-checkbox h-5 w-5 text-indigo-500 rounded bg-gray-700 border-gray-500 focus:ring-indigo-500">
+                                <span>Beratungsgespräch Agentur für Arbeit vereinbaren</span>
+                            </label>
+                            <label class="flex items-center space-x-3 cursor-pointer">
+                                <input type="checkbox" id="step3" class="form-checkbox h-5 w-5 text-indigo-500 rounded bg-gray-700 border-gray-500 focus:ring-indigo-500">
+                                <span>Infoveranstaltung (Tag der offenen Tür, Messe) besuchen</span>
+                            </label>
+                            <div class="flex items-center space-x-3 pt-2">
+                                <span class="font-medium text-gray-300">Anderes:</span>
+                                <input type="text" id="stepOtherText" class="flex-1 p-2 bg-transparent border-b border-gray-500 focus:border-indigo-400 outline-none text-white" placeholder="Eigene Schritte eintragen...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Export Button Section -->
+    <div id="btn-section" class="max-w-6xl mx-auto mt-8 mb-12 flex justify-center">
+        <button onclick="exportToTXT()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-full shadow-lg transform transition hover:scale-105 flex items-center text-lg">
+            <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+            Als Textdatei (.txt) speichern
+        </button>
+    </div>
+
+    <!-- Skripte für Interaktivität und TXT Export -->
+    <script>
+        // Textfelder automatisch beim Tippen anpassen
+        document.querySelectorAll('.auto-expand').forEach(textarea => {
+            textarea.addEventListener('input', function() {
+                this.style.height = 'auto';
+                this.style.height = (this.scrollHeight) + 'px';
+            });
+        });
+
+        // Zuverlässige Logik zur Erstellung einer reinen TXT-Datei
+        function exportToTXT() {
+            // Hilfsfunktion zum sicheren Auslesen
+            const getVal = (id) => {
+                const element = document.getElementById(id);
+                const val = element ? element.value.trim() : '';
+                return val ? val : '—';
+            };
+            const isChecked = (id) => document.getElementById(id) && document.getElementById(id).checked;
+
+            const name = getVal('studentName');
+            const thema1 = getVal('thema1');
+            const thema2 = getVal('thema2');
+            
+            // Checkliste auswerten
+            let steps = [];
+            if(isChecked('step1')) steps.push('Eltern/Verwandte im Berufsfeld befragen');
+            if(isChecked('step2')) steps.push('Beratungsgespräch bei der Agentur für Arbeit');
+            if(isChecked('step3')) steps.push('Infoveranstaltung besuchen');
+            const otherStep = document.getElementById('stepOtherText') ? document.getElementById('stepOtherText').value.trim() : '';
+            if(otherStep) steps.push('Anderes: ' + otherStep);
+            const stepsText = steps.length > 0 ? steps.map(s => '- ' + s).join('\n') : '—';
+
+            // TXT Inhalt aufbauen
+            let txtContent = `RECHERCHE-PROTOKOLL: BERUFLICHE ORIENTIERUNG\n`;
+            txtContent += `==============================================\n\n`;
+            
+            txtContent += `Name: ${name !== '—' ? name : 'Nicht angegeben'}\n`;
+            txtContent += `Datum: ${new Date().toLocaleDateString('de-DE')}\n\n`;
+            
+            txtContent += `Fokus-Themen:\n1. ${thema1}\n2. ${thema2}\n\n`;
+            
+            txtContent += `----------------------------------------------\n`;
+            txtContent += `1. Selbsterkundung & Kompetenzcheck\n\n`;
+            txtContent += `Ergebnisse:\n${getVal('notes1_1')}\n\n`;
+            txtContent += `Erkenntnisse:\n${getVal('notes1_2')}\n\n`;
+            
+            txtContent += `----------------------------------------------\n`;
+            txtContent += `2. Studium & Ausbildung\n\n`;
+            txtContent += `Ausbildungen/Studiengänge:\n${getVal('notes2_1')}\n\n`;
+            txtContent += `Voraussetzungen:\n${getVal('notes2_2')}\n\n`;
+            
+            txtContent += `----------------------------------------------\n`;
+            txtContent += `3. Weitere Möglichkeiten (Überbrückung)\n\n`;
+            txtContent += `Plan B (Sozial, Ausland etc.):\n${getVal('notes3')}\n\n`;
+            
+            txtContent += `----------------------------------------------\n`;
+            txtContent += `4. Region Köln/Bonn\n\n`;
+            txtContent += `Regionale Einrichtungen:\n${getVal('notes4')}\n\n`;
+            
+            txtContent += `----------------------------------------------\n`;
+            txtContent += `5. & 6. Finanzierung & Stipendien\n\n`;
+            txtContent += `Finanzierungsplan:\n${getVal('notes5_1')}\n\n`;
+            txtContent += `Stipendien-Voraussetzungen:\n${getVal('notes5_2')}\n\n`;
+            
+            txtContent += `----------------------------------------------\n`;
+            txtContent += `7. Wohnen\n\n`;
+            txtContent += `Geplante Wohnsituation:\n${getVal('notes7')}\n\n`;
+            
+            txtContent += `----------------------------------------------\n`;
+            txtContent += `FAZIT & NÄCHSTE SCHRITTE\n\n`;
+            txtContent += `Offene Fragen:\n${getVal('offeneFragen')}\n\n`;
+            txtContent += `Nächste Schritte:\n${stepsText}\n`;
+
+            // Datei generieren und Download auslösen
+            const blob = new Blob([txtContent], { type: 'text/plain;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            
+            const a = document.createElement('a');
+            a.href = url;
+            const filename = name !== '—' ? `Recherche_${name.replace(/\s+/g, '_')}.txt` : 'Recherche_Protokoll.txt';
+            a.download = filename;
+            
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            
+            // Aufräumen
+            URL.revokeObjectURL(url);
+        }
+    </script>
+<!-- rechtliches --><style>.erik-recht{font:13px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;text-align:center;padding:18px 12px 22px;opacity:.75}.erik-recht a{color:inherit}@media print{.erik-recht{display:none}}</style><footer class="erik-recht"><a href="https://erikdahlmann.github.io/impressum.html">Impressum</a> · <a href="https://erikdahlmann.github.io/datenschutz.html">Datenschutz</a></footer><!-- /rechtliches --></body>
+</html>
